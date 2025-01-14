@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        .mobile-menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="flex justify-between items-center p-4 bg-gray-800">
+        <div class="text-lg font-semibold">M Ikhsan Syabani</div>
+        <nav class="hidden md:flex space-x-4">
+            <a class="hover:text-gray-400" href="index.html">Home</a>
+            <a class="hover:text-gray-400" href="portfolio.html">Portfolio</a>
+            <a class="hover:text-gray-400" href="about.html">About Me</a>
+            <a class="hover:text-gray-400" href="contact.html">Contact</a>
+        </nav>
+        <div class="md:hidden mobile-menu">
+            <i class="fas fa-bars cursor-pointer" id="menu-toggle"></i>
+        </div>
+    </header>
+    <nav id="mobile-nav" class="hidden md:hidden flex-col bg-gray-800 transition-all duration-300 ease-in-out">
+        <a class="hover:text-gray-400 p-2" href="index.html">Home</a>
+        <a class="hover:text-gray-400 p-2" href="portfolio.html">Portfolio</a>
+        <a class="hover:text-gray-400 p-2" href="about.html">About Me</a>
+        <a class="hover:text-gray-400 p-2" href="contact.html">Contact</a>
+    </nav>
+    <main class="flex flex-col md:flex-row items-center justify-between p-8">
+        <div class="w-full md:w-1/2">
+            <img alt="Portrait of M Ikhsan Syabani" class="rounded-lg" src="ikhsan.jpg"/>
+        </div>
+        <div class="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8">
+            <h1 class="text-6xl font-bold">My Portfolio</h1>
+            <p class="mt-4 text-gray-400">Seorang Mahasiswa S1 Sistem Informasi Universitas Kuningan yang mampu merancang projek IoT dengan menggunakan Arduino.</p>
+        </div>
+    </main>
+    <footer class="flex justify-end p-4">
+        <p>&copy; 2025 M Ikhsan Syabani. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        // JavaScript untuk toggle menu
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.getElementById('mobile-nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>

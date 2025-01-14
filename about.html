@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> <!-- Pastikan Font Awesome disertakan -->
+    <style>
+        .mobile-menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="flex justify-between items-center p-4 bg-gray-800">
+        <div class="text-lg font-semibold">M Ikhsan Syabani</div>
+        <nav class="hidden md:flex space-x-4">
+            <a class="hover:text-gray-400" href="index.html">Home</a>
+            <a class="hover:text-gray-400" href="portfolio.html">Portfolio</a>
+            <a class="hover:text-gray-400" href="about.html">About Me</a>
+            <a class="hover:text-gray-400" href="contact.html">Contact</a>
+        </nav>
+        <div class="md:hidden mobile-menu">
+            <i class="fas fa-bars cursor-pointer" id="menu-toggle"></i>
+        </div>
+    </header>
+    <nav id="mobile-nav" class="hidden md:hidden flex-col bg-gray-800 transition-all duration-300 ease-in-out">
+        <a class="hover:text-gray-400 p-2" href="index.html">Home</a>
+        <a class="hover:text-gray-400 p-2" href="portfolio.html">Portfolio</a>
+        <a class="hover:text-gray-400 p-2" href="about.html">About Me</a>
+        <a class="hover:text-gray-400 p-2" href="contact.html">Contact</a>
+    </nav>
+    <main class="p-8">
+        <h1 class="text-4xl font-bold">About Me</h1>
+        <p class="mt-4 text-gray-400">Saya adalah mahasiswa S1 Sistem Informasi Universitas Kuningan dengan minat khusus pada pengembangan jaringan dan IoT. Selama kuliah ini , saya telah mempelajari beberapa keterampilan penting, seperti pemrograman menggunakan bahasa C, konfigurasi jaringan menggunakan perangkat lunak seperti Cisco Packet Tracer, dan pengembangan aplikasi berbasis web. Saya juga memiliki pengalaman dalam mengerjakan beberapa proyek kecil, seperti membuat sistem Tempat sampah otomatis dan pengukur volume air berbasis IoT dan membangun topologi jaringan menggunakan cisco, saya juga pernah mengikuti Junior Network Administrator yang di selenggarakan oleh BPSDMP.KOMINFO.BANDUNG. Melalui proyek-proyek ini, saya belajar bagaimana menerapkan teori yang saya pelajari di kelas ke dalam praktik nyata.</p>
+        <h2 class="text-2xl font-semibold mt-6">Pendidikan</h2>
+        <p class="mt-2 text-gray-400">Universitas Kuningan, S1 Sistem Informasi, 2023 - Sekarang</p>
+        <p class="mt-2 text-gray-400">Smk Muhamadiyah 2 Kuningan, Teknik Komputer dan Jaringan, 2020 - 2023</p>
+        <p class="mt-2 text-gray-400">Mts Ciniru, 2017 - 2020</p>
+        <p class="mt-2 text-gray-400">Sd Negri Pakapasan Girang, 2011 - 2017</p>
+        <h2 class="text-2xl font-semibold mt-6">Keterampilan</h2>
+        <ul class="list-disc list-inside mt-2 text-gray-400">
+            <li>Jaringan Komputer</li>
+            <li>Arduino dan IoT</li>
+        </ul>
+        <h2 class="text-2xl font-semibold mt-6">Tujuan Karier</h2>
+        <p class="mt-2 text-gray-400">Saya ingin berkontribusi secara aktif dalam proyek Jaringan dan Internet of Things yang inovatif, serta membantu perusahaan dalam mencapai tujuan strategis mereka melalui solusi digital yang efektif dan efisien. Dengan pengetahuan dan keterampilan yang saya miliki , saya berkomitmen untuk menciptakan dampak positif dan memberikan nilai tambah yang signifikan bagi perusahaan.</p>
+    </main>
+    <footer class="flex justify-end p-4">
+        <p>&copy; 2025 M Ikhsan Syabani. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.getElementById('mobile-nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>

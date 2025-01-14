@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> <!-- Pastikan Font Awesome disertakan -->
+    <style>
+        .mobile-menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="flex justify-between items-center p-4 bg-gray-800">
+        <div class="text-lg font-semibold">M Ikhsan Syabani</div>
+        <nav class="hidden md:flex space-x-4">
+            <a class="hover:text-gray-400" href="index.html">Home</a>
+            <a class="hover:text-gray-400" href="portfolio.html">Portfolio</a>
+            <a class="hover:text-gray-400" href="about.html">About Me</a>
+            <a class="hover:text-gray-400" href="contact.html">Contact</a>
+        </nav>
+        <div class="md:hidden mobile-menu">
+            <i class="fas fa-bars cursor-pointer" id="menu-toggle"></i>
+        </div>
+    </header>
+    <nav id="mobile-nav" class="hidden md:hidden flex-col bg-gray-800 transition-all duration-300 ease-in-out">
+        <a class="hover:text-gray-400 p-2" href="index.html">Home</a>
+        <a class="hover:text-gray-400 p-2" href="portfolio.html">Portfolio</a>
+        <a class="hover:text-gray-400 p-2" href="about.html">About Me</a>
+        <a class="hover:text-gray-400 p-2" href="contact.html">Contact</a>
+    </nav>
+    <main class="p-8">
+        <h1 class="text-4xl font-bold">Portfolio Karya</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div class="bg-gray-800 p-4 rounded-lg">
+                <video controls class="rounded-lg w-full">
+                    <source src="projek_tongsampah.mp4" type="video/mp4"> 
+                </video>
+                <h2 class="text-xl font-semibold mt-2">Projek Tongsampah</h2>
+                <p class="text-gray-400">Tempat Sampah Otomatis dengan Arduino bertujuan untuk mempermudah proses pembuangan sampah tanpa menyentuhnya, mencegah penyebaran kuman dan penyakit, serta memberikan manfaat bagi berbagai kalangan, termasuk kaum disabilitas tunanetra. </p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg">
+                <video controls class="rounded-lg w-full">
+                    <source src="mentoring.mp4" type="video/mp4">
+                </video>
+                <h2 class="text-xl font-semibold mt-2">Mentoring Pkl</h2>
+                <p class="text-gray-400">Saya dipercayai oleh dosen sebagai mentor untuk mata pelajaran Internet of Things (IoT) bagi siswa PKL.</p>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg">
+                <img src="vsga.png" alt="" srcset="">
+                <h2 class="text-xl font-semibold mt-2">Pelatihan Junior Network Administrator</h2>
+                <p class="text-gray-400">Saya lolos untuk mengikuti pelatihan Junior Network Administrator yang di selenggarakan oleh BPSDMP KOMINFO BANDUNG yang di laksanakan pada tanggal 26 Februari - 1 Maret 2024. di Fkom Universitas Kuningan</p>    
+            </div>
+        </div>
+    </main>
+    <footer class="flex justify-end p-4">
+        <p>&copy; 2025 M Ikhsan Syabani. Semua hak dilindungi .</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.getElementById('mobile-nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>

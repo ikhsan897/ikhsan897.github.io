@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terima Kasih</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        .mobile-menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="flex justify-between items-center p-4 bg-gray-800">
+        <div class="text-lg font-semibold">M Ikhsan Syabani</div>
+        <nav class="hidden md:flex space-x-4">
+            <a class="hover:text-gray-400" href="index.html">Home</a>
+            <a class="hover:text-gray-400" href="portfolio.html">Portfolio</a>
+            <a class="hover:text-gray-400" href="about.html">About Me</a>
+            <a class="hover:text-gray-400" href="contact.html">Contact</a>
+        </nav>
+        <div class="md:hidden mobile-menu">
+            <i class="fas fa-bars cursor-pointer" id="menu-toggle"></i>
+        </div>
+    </header>
+    <nav id="mobile-nav" class="hidden md:hidden flex-col bg-gray-800 transition-all duration-300 ease-in-out">
+        <a class="hover:text-gray-400 p-2" href="index.html">Home</a>
+        <a class="hover:text-gray-400 p-2" href="portfolio.html">Portfolio</a>
+        <a class="hover:text-gray-400 p-2" href="about.html">About Me</a>
+        <a class="hover:text-gray-400 p-2" href="contact.html">Contact</a>
+    </nav>
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+            <div class="text-center lg:w-2/3 w-full">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+                    Terima Kasih telah menghubungi kami
+                </h1>
+                <p class="mb-8 leading-relaxed text-white">
+                    Silakan periksa email Anda dalam 24 jam, kami akan mengirimkan balasan secepat mungkin. Terima kasih!
+                </p>
+                <div class="flex justify-center">
+                    <a href="index.html" class="inline-flex text-white bg-gray-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">
+                        Kembali
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="flex justify-end p-4">
+        <p>&copy; 2025 M Ikhsan Syabani. Semua hak dilindungi.</p>
+    </footer>
+    <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const nav = document.getElementById('mobile-nav');
+        nav.classList.toggle('hidden');
+        nav.classList.toggle('flex');
+    });</script>
+</body>
+</html>
